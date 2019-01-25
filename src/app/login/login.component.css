@@ -1,0 +1,25 @@
+.container-fluid {
+  background-color: #353d47;
+  background-size: cover;
+  position: relative;
+  height: 100vh;
+}
+.login-box {
+  width: 100%;
+  max-width: 320px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -200px;
+  margin-top: -200px;
+}
+.login-form {
+  padding: 0;
+}
+.login-body {
+  background-color: white;
+  padding: 1.5em;
+}
+.login-form-button {
+  width: 100%;
+}

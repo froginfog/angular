@@ -1,0 +1,148 @@
+<nz-layout>
+  <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzWidth]="width" [nzReverseArrow]="isReverseArrow">
+    <div class="logo">
+      内容管理
+    </div>
+    <ul nz-menu [nzTheme]="'dark'" [nzMode]="'inline'" [nzInlineCollapsed]="isCollapsed">
+      <app-side></app-side>
+    </ul>
+  </nz-sider>
+  <nz-layout>
+    <nz-content style="margin:0 16px;">
+      <nz-breadcrumb style="margin:16px 0;">
+        <nz-breadcrumb-item>基本信息</nz-breadcrumb-item>
+      </nz-breadcrumb>
+      <div style="padding:24px; background: #fff; min-height: 360px;">
+        <form nz-form>
+          <nz-form-item>
+            <nz-form-label nzFor="info_sitename" [nzSm]="2">网站名称</nz-form-label>
+            <nz-form-control [nzSm]="20">
+              <input type="text" nz-input name="info_sitename" id="info_sitename" [(ngModel)]="info.info_sitename">
+            </nz-form-control>
+          </nz-form-item>
+          <nz-form-item>
+            <nz-form-label nzFor="info_domain" [nzSm]="2">网站域名</nz-form-label>
+            <nz-form-control [nzSm]="20">
+              <input type="text" nz-input name="info_domain" id="info_domain" [(ngModel)]="info.info_domain">
+            </nz-form-control>
+          </nz-form-item>
+          <nz-form-item>
+            <nz-form-label nzFor="info_keywords" [nzSm]="2">网站关键词</nz-form-label>
+            <nz-form-control [nzSm]="20">
+              <nz-select nzMode="tags" style="width: 100%;" id="info_keywords" name="info_keywords" [(ngModel)]="info.info_keywords"></nz-select>
+            </nz-form-control>
+          </nz-form-item>
+          <nz-form-item>
+            <nz-form-label nzFor="info_description" [nzSm]="2">网站描述</nz-form-label>
+            <nz-form-control [nzSm]="20">
+              <textarea rows="2" nz-input id="info_description" name="info_description" [(ngModel)]="info.info_description"></textarea>
+            </nz-form-control>
+          </nz-form-item>
+          <nz-form-item>
+            <nz-form-label nzFor="info_addr" [nzSm]="2">公司地址</nz-form-label>
+            <nz-form-control [nzSm]="20">
+              <input type="text" nz-input name="info_addr" id="info_addr" [(ngModel)]="info.info_addr">
+            </nz-form-control>
+          </nz-form-item>
+
+          <nz-form-item>
+            <nz-form-label nzFor="info_zipcode" [nzSm]="2">邮政编码</nz-form-label>
+            <nz-form-control [nzSm]="20">
+              <input type="text" nz-input name="info_zipcode" id="info_zipcode" [(ngModel)]="info.info_zipcode">
+            </nz-form-control>
+          </nz-form-item>
+          <nz-form-item>
+            <nz-form-label nzFor="info_linkman" [nzSm]="2">联系人</nz-form-label>
+            <nz-form-control [nzSm]="20">
+              <input type="text" nz-input name="info_linkman" id="info_linkman" [(ngModel)]="info.info_linkman">
+            </nz-form-control>
+          </nz-form-item>
+          <nz-form-item>
+            <nz-form-label nzFor="info_mobile" [nzSm]="2">手机</nz-form-label>
+            <nz-form-control [nzSm]="20">
+              <input type="text" nz-input name="info_mobile" id="info_mobile" [(ngModel)]="info.info_mobile">
+            </nz-form-control>
+          </nz-form-item>
+          <nz-form-item>
+            <nz-form-label nzFor="info_phone" [nzSm]="2">固定电话</nz-form-label>
+            <nz-form-control [nzSm]="20">
+              <input type="text" nz-input name="info_phone" id="info_phone" [(ngModel)]="info.info_phone">
+            </nz-form-control>
+          </nz-form-item>
+          <nz-form-item>
+            <nz-form-label nzFor="info_fax" [nzSm]="2">传真</nz-form-label>
+            <nz-form-control [nzSm]="20">
+              <input type="text" nz-input name="info_fax" id="info_fax" [(ngModel)]="info.info_fax">
+            </nz-form-control>
+          </nz-form-item>
+          <nz-form-item>
+            <nz-form-label nzFor="info_email" [nzSm]="2">电子邮箱</nz-form-label>
+            <nz-form-control [nzSm]="20">
+              <input type="text" nz-input name="info_email" id="info_email" [(ngModel)]="info.info_email">
+            </nz-form-control>
+          </nz-form-item>
+          <nz-form-item>
+            <nz-form-label nzFor="info_wechat" [nzSm]="2">微信</nz-form-label>
+            <nz-form-control [nzSm]="20">
+              <input type="text" nz-input name="info_wechat" id="info_wechat" [(ngModel)]="info.info_wechat">
+            </nz-form-control>
+          </nz-form-item>
+          <nz-form-item>
+            <nz-form-label nzFor="info_qq" [nzSm]="2">QQ</nz-form-label>
+            <nz-form-control [nzSm]="20">
+              <input type="text" nz-input name="info_qq" id="info_qq" [(ngModel)]="info.info_qq">
+            </nz-form-control>
+          </nz-form-item>
+          <nz-form-item>
+            <nz-form-label nzFor="info_skype" [nzSm]="2">Skype</nz-form-label>
+            <nz-form-control [nzSm]="20">
+              <input type="text" nz-input name="info_skype" id="info_skype" [(ngModel)]="info.info_skype">
+            </nz-form-control>
+          </nz-form-item>
+          <nz-form-item>
+            <nz-form-label nzFor="info_other" [nzSm]="2">其他</nz-form-label>
+            <nz-form-control [nzSm]="20">
+              <input type="text" nz-input name="info_other" id="info_other" [(ngModel)]="info.info_other">
+            </nz-form-control>
+          </nz-form-item>
+          <nz-form-item>
+            <nz-form-label nzFor="info_banner" [nzSm]="2">banner</nz-form-label>
+            <nz-form-control [nzSm]="20">
+              <nz-upload
+                [nzAction]="uploadUrl"
+                nzListType="picture"
+                [(nzFileList)]="info.info_banner"
+                [nzCustomRequest]="customReq1"
+                [nzFileType]="'image/png,image/jpeg,image/gif,image/bmp'"
+                [nzSize]="2048"
+                >
+                <button nz-button>
+                  <i nz-icon type="upload"></i><span>Upload</span>
+                </button>
+              </nz-upload>
+            </nz-form-control>
+          </nz-form-item>
+          <nz-form-item>
+            <nz-form-label nzFor="info_carousel" [nzSm]="2">轮播图</nz-form-label>
+            <nz-form-control [nzSm]="20">
+              <nz-upload
+                [nzAction]="uploadUrl"
+                nzListType="picture"
+                [(nzFileList)]="info.info_carousel"
+                [nzCustomRequest]="customReq2"
+                [nzFileType]="'image/png,image/jpeg,image/gif,image/bmp'"
+                [nzSize]="2048"
+              >
+                <button nz-button>
+                  <i nz-icon type="upload"></i><span>Upload</span>
+                </button>
+              </nz-upload>
+            </nz-form-control>
+          </nz-form-item>
+
+        </form>
+      </div>
+    </nz-content>
+    <nz-footer></nz-footer>
+  </nz-layout>
+</nz-layout>

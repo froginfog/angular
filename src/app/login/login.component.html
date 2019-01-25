@@ -1,0 +1,45 @@
+<div class="container-fluid">
+  <div class="login-box">
+    <div class="login-form row">
+      <div class="col-sm-12">
+        <div class="login-body">
+          <form nz-form #loginForm="ngForm" (ngSubmit)="submit()">
+            <nz-form-item>
+              <nz-form-control>
+                <nz-input-group>
+                  <input type="text" #username="ngModel" name="username" nz-input  placeholder="用户名" [(ngModel)]="loginInfo.username" required>
+                </nz-input-group>
+              </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+              <nz-form-control>
+                <nz-input-group>
+                  <input type="password" name="password" nz-input  placeholder="密码" [(ngModel)]="loginInfo.password" required>
+                </nz-input-group>
+              </nz-form-control>
+            </nz-form-item>
+
+            <nz-form-item>
+              <nz-form-control>
+                <div nz-row [nzGutter]="30">
+                  <div nz-col [nzSpan]="12">
+                    <input name="captcha" nz-input id="captcha" placeholder="验证码" [(ngModel)]="loginInfo.captcha" required>
+                  </div>
+                  <div nz-col [nzSpan]="12" [innerHtml]="imageCode" (click)="loadImage()">
+
+                  </div>
+                </div>
+              </nz-form-control>
+            </nz-form-item>
+
+            <nz-form-item>
+              <nz-form-control>
+                <button nz-button class="login-form-button" [nzType]="'primary'" [disabled]="!loginForm.form.valid">登入</button>
+              </nz-form-control>
+            </nz-form-item>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
